@@ -11,9 +11,7 @@ package playertracker;
  */
 public class PlayerTracker {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
 
         long[] arr;                 //references array
@@ -61,6 +59,25 @@ public class PlayerTracker {
     
     searchKey = 54;                                             // Delete item with key 55
     
+    for(j = 0; j < nElems; j++ ){
+        if(arr[j] == searchKey){                                // look for it 
+            break;
+        }
+        
+    for(int k = j; k < nElems; k++ ){                           // move higher ones up
+        arr[k] = arr[k+1];
+        nElems--;                                               // decrements size
+        }    
     }
     
-}
+    //===========================================================================
+    
+    for( j = 0; j < nElems; j++){                               // Display items
+        System.out.println(arr[j] + " ");
+        System.out.println("");
+    }
+    
+    
+    }   // Ends main
+    
+}   // ends class
